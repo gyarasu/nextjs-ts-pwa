@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "start:dev": "nodemon server/index.ts",
+    "start:prd": "NODE_ENV=production node ./dist/server/index.js",
+    "build": "next build && tsc -p ./server",
     "start": "next start"
   },
   "dependencies": {
-    "next": "9.0.2",
+    "express": "^4.17.1",
+
     "next-offline": "^4.0.2",
     "react": "16.8.6",
     "react-dom": "16.8.6"
@@ -16,6 +18,7 @@
   "devDependencies": {
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.5",
+    "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   }
 }
