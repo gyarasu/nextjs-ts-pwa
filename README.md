@@ -6,8 +6,8 @@ This template includes as below.
 - [TypeScript](https://www.typescriptlang.org)
 - PWA by [next-offline](https://github.com/hanford/next-offline)
   - Service Worker
-  - Precaching
-  - RuntimeCaching(sample)
+  - Pre Caching
+  - Runtime Caching(sample)
   - Add to HomeScreen
   - manifest.json
 
