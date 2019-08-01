@@ -1,0 +1,21 @@
+{
+    "name": "nextjs-ts-pwa",
+    "short_name": "Next PWA",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "PWA on Next.js.",
+    "icons": [
+      {
+        "src": "img/icon192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icon512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
