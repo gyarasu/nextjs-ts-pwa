@@ -1,0 +1,41 @@
+name:
+  nextjs-ts-pwa-ci
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10]
+    
+    steps:
+      # checkout repository
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      # prepare node runtime
+      - name: Prepare Node Env
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      
+      # confirm node version
+      - name: Node Version
+        run: node -v
+
+      # setup yarn
+      - name: Install yarn
+        run: npm install -g yarn
+      
+      # install dependencies
+      - name: Install Dependencies
+        run: yarn
+
+      # test build
+      - name: Test Build（Lint and tsc）
+        run: yarn build:ci
