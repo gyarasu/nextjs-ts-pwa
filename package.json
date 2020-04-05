@@ -6,7 +6,7 @@
     "start:dev": "nodemon server/index.ts",
     "start:prd": "NODE_ENV=production node ./dist/server/index.js",
     "build": "next build && tsc -p ./server",
-    "build:ci": "yarn lint && tsc --noEmit",
+    "build:ci": "yarn lint && tsc --noEmit --incremental false",
     "lint": "eslint --fix -c ./.eslintrc.json './**/*.ts'",
     "start": "next start"
   },
