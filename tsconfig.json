@@ -13,7 +13,6 @@
     "outDir": "./dist",
     "jsx": "preserve",
     "baseUrl": "./",
-    "incremental": true,
     "strict": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
@@ -27,7 +26,8 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "noEmit": true
   },
   "exclude": [
     "node_modules",
