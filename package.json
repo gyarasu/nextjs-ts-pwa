@@ -3,12 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start:dev": "nodemon server/index.ts",
-    "start:prd": "NODE_ENV=production node ./dist/server/index.js",
+    "dev": "nodemon server/index.ts",
+    "start": "NODE_ENV=production node ./dist/server/index.js",
     "build": "yarn lint && next build && tsc -p ./server",
     "build:ci": "yarn lint && tsc --noEmit --incremental false",
-    "lint": "eslint --fix -c ./.eslintrc.json './**/*.ts'",
-    "start": "next start"
+    "lint": "eslint --fix -c ./.eslintrc.json './**/*.ts'"
   },
   "dependencies": {
     "express": "4.17.1",

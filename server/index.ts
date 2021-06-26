@@ -18,6 +18,10 @@ const main = async (): Promise<void> => {
     return res.sendFile(filePath);
   });
 
+  server.post('/sample-post', (req: Request, res: Response) => {
+    return res.status(200).json({ result: 'thanks!!' });
+  });
+
   // nextjs routing
   server.get('*', (req, res) => void handle(req, res));
 
