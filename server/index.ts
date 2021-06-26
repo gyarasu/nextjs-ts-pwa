@@ -19,11 +19,11 @@ const main = async (): Promise<void> => {
   });
 
   // nextjs routing
-  server.get('*', (req, res) => handle(req, res));
+  server.get('*', (req, res) => void handle(req, res));
 
   server.listen(PORT, () => {
     console.log(`> Ready on http://localhost:${PORT}`);
   });
 };
 
-main();
+void main();
